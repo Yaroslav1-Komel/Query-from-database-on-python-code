@@ -22,14 +22,19 @@ print ( connection.get_dsn_parameters (), "\n" )
 # Create cursor
 c = conn.cursor ()
 # Create table
-'''
-c.execute("""CREATE TABLE managers(
-    manager_id text,
-    name text,
-    salary text
 
-    )""")
+# SQL query to create a new table
+'''c.execute("""CREATE TABLE managers(
+    manager_id INT PRIMARY KEY NOT NULL,
+    name           TEXT NOT NULL,
+    salary       TEXT NOT NULL)""");
 '''
+#    # Execute a command: this creates a new table
+#    c.execute(create_table_query)
+#    conn.commit()
+#    print("Table created successfully in PostgreSQL ")
+
+
 
 # Create Edit function to update a record
 def update() :
