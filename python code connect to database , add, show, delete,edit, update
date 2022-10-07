@@ -61,7 +61,7 @@ def edit():
     editor.iconbitmap ( 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\PostgreSQL 10\pgAdmin 4.lnk' )
     editor.geometry ( "500x500" )
     # Create a database or connect to one
-    conn = connection = psycopg2.connect ( user="postgres",
+    conn = psycopg2.connect ( user="postgres",
                                        password="test",
                                        host="127.0.0.1",
                                        port="5433",
@@ -108,7 +108,7 @@ def edit():
 # Create Function to Delete A Record
 def delete() :
     # Create a database or connect to one
-    conn = connection = psycopg2.connect ( user="postgres",
+    conn = psycopg2.connect ( user="postgres",
                                        password="test",
                                        host="127.0.0.1",
                                        port="5433",
@@ -128,7 +128,7 @@ def delete() :
 # Create Submit Function For database
 def submit() :
     # Create a database or connect to one
-    conn = connection = psycopg2.connect ( user="postgres",
+    conn = psycopg2.connect ( user="postgres",
                                        password="test",
                                        host="127.0.0.1",
                                        port="5433",
@@ -162,7 +162,7 @@ def submit() :
 # Create Query Function
 def query() :
     # Create a database or connect to one
-    conn = connection = psycopg2.connect ( user="postgres",
+    conn = psycopg2.connect ( user="postgres",
                                        password="test",
                                        host="127.0.0.1",
                                        port="5433",
@@ -173,7 +173,7 @@ def query() :
     # Query the database
     postgres_insert_query = "select * from managers"
     c.execute ( postgres_insert_query )
-    manager_records = c.fetchmany ( 2 )
+    manager_records = c.fetchmany ( 0 )
     records = c.fetchall()  # fetchall # fetchone #fetchmany
     # print(records)                          #print(c.fetchall())
 
